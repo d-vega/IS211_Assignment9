@@ -15,7 +15,7 @@ soup = BeautifulSoup(TOUCHDOWNS_PG.read(), features='lxml')
 players = soup.find_all("tr", class_={"row1", "row2"})
 players_td = soup.find_all("td", class_={"sort"})
 plyr_list = []
-plyr_list_decode = []
+finallist = []
 counter = 0
 
 
@@ -30,13 +30,8 @@ for a_tag in players:
     counter += 1
 
 
-for item in plyr_list:
-    tmp_list = []
-    for content in item:
-        print content
-        decoded = content.decode("ascii")
-        tmp_list.append(decoded)
-    plyr_list_decode.append(tmp_list)
+for plyr_data in plyr_list:
+    finallist.append(json.dumps(plyr_data))
 
 
-print plyr_list_decode
+print json.dumps(plyr_list[0][0])
