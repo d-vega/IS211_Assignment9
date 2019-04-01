@@ -1,7 +1,7 @@
 #!/usr/bin/env
 # -*- coding: utf-8 -*-
 """IS211 Assignment 9 by Diandra Vega - Parse Apple stock and return
-date with it's close price."""
+date with its close price."""
 
 
 from bs4 import BeautifulSoup
