@@ -11,7 +11,6 @@ import urllib2
 APPLE_STOCK = urllib2.urlopen("https://www.nasdaq.com/symbol/aapl/historical")
 SOUP = BeautifulSoup(APPLE_STOCK.read(), 'lxml')
 STOCK = SOUP.tbody.find_all("tr")
-STOCK_LIST = []
 
 
 for item in STOCK:
