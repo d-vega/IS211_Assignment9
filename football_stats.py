@@ -1,6 +1,7 @@
 #!/usr/bin/env
 # -*- coding: utf-8 -*-
-"""IS211 Assignment 9 by Diandra Vega"""
+"""IS211 Assignment 9 by Diandra Vega - Parse CBS NFL stats
+webpage and return top 20 players with their total touchdowns"""
 
 
 from bs4 import BeautifulSoup
